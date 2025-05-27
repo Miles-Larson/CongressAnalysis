@@ -1,7 +1,7 @@
-import secret_api
+import secret_stuff
 import requests
 
-api_key = secret_api.congress_gov_api
+api_key = secret_stuff.congress_gov_api
 
 requests.get('https://api.congress.gov/v3/bill?api_key=' + api_key)
 
@@ -13,3 +13,4 @@ response = requests.get(url,headers=headers)
 response.raise_for_status()
 
 print(response.text)
+
